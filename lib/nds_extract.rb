@@ -23,3 +23,14 @@ def directors_totals(nds)
   results
 end
 
+def gross_for_director(director_data)
+  total = 0
+  index = 0
+  
+  while index < director_data[:movies].length do
+    total += director_data[:movies][index][:worldwide_grosses]
+    index+= 1
+  end
+  
+  total
+end
